@@ -11,28 +11,27 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+            >
         <title>Libros</title>
     </head>
     <body>
-        <h1>Lista de libros Registrados</h1>
-        
+        <main class="container">
+            <h1>Lista de libros Registrados</h1>
 
-        
-        
-        
-        
-        
-        <%
-            List<Libro> listaLibros = (List) request.getSession().getAttribute("listaLibros");
+            <%
+                List<Libro> listaLibros = (List) request.getSession().getAttribute("listaLibros");
 
-            for(Libro libro : listaLibros) {
-          %>  
-          <p>Titulo: <%= libro.getTitle() %></p>  
-          <p>Autor: <%= libro.getAuthor()%></p>
-          <p>Año: <%= libro.getYear()%></p>
-          <p>-------------------------------</p>
-            <% } %>
-            
-       
+                for (Libro libro : listaLibros) {
+            %>  
+            <p>Titulo: <%= libro.getTitle()%></p>  
+            <p>Autor: <%= libro.getAuthor()%></p>
+            <p>Año: <%= libro.getYear()%></p>
+            <p>-------------------------------</p>
+            <% }%>
+        </main>
+
     </body>
 </html>

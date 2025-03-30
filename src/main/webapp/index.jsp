@@ -9,6 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+            >
         <title>Agregar Libro</title>
     </head>
     <body>
@@ -19,34 +23,39 @@
             if (mensaje != null) {
         %>
         <script>
-                alert("<%= mensaje%>");
+            alert("<%= mensaje%>");
         </script>
         <%
                 // Eliminar el mensaje de la sesión después de mostrarlo
                 session.removeAttribute("mensaje");
             }
         %>
-        <h1>Formulario</h1>
-        <h2>Agregar Nuevo Libro</h2>
-        <form action="SvLibros" method="POST">
-            <label for="title">Título:</label>
-            <input type="text" id="title" name="title" required><br><br>
 
-            <label for="author">Autor:</label>
-            <input type="text" id="author" name="author" required><br><br>
+        <main class="container">
+            <h1>Formulario</h1>
+            <h2>Agregar Nuevo Libro</h2>
 
-            <label for="year">Año:</label>
-            <input type="number" id="year" name="year" required><br><br>
+            <form action="SvLibros" method="POST">
+                <fieldset
+                    <label for="title">Título:
+                        <input type="text" id="title" name="title" required></label>
 
-            <button type="submit">Agregar Libro</button>
-        </form>
+                    <label for="author">Autor:
+                        <input type="text" id="author" name="author" required></label>
 
-        <h2>Ver lista de libros</h2>
+                    <label for="year">Año:
+                        <input type="number" id="year" name="year" required></label>
+                </fieldset>    
 
-        <p>Para ver los libros registrador haga click en el siguiente boton</p>
-        <form action="SvLibros" method="GET">
-            <button type="submit">Mostrar Libros</button>
-        </form>
+                <button type="submit">Agregar Libro</button>
+            </form>
 
+            <h2>Ver lista de libros</h2>
+
+            <p>Para ver los libros registrador haga click en el siguiente boton</p>
+            <form action="SvLibros" method="GET">
+                <button type="submit">Mostrar Libros</button>
+            </form>
+        </main>
     </body>
 </html>
