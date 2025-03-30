@@ -1,0 +1,1 @@
+Este proyecto es una aplicación web sencilla que implementa funcionalidades básicas utilizando Java Servlets y JSP (JavaServer Pages). Su objetivo es ejemplo educativo en aplicaciones web basadas en Java
