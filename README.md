@@ -85,7 +85,6 @@ String url = "jdbc:mysql://" + ip + ":" + puerto + "/" + db;
     
 -   **Listar libros**: Se muestran los libros registrados en una página JSP.
     
--   **Persistencia de sesión**: Se usa `HttpSession` para almacenar temporalmente datos del usuario.
     
 
 ## Autor
